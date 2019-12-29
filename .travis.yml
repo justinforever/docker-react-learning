@@ -6,4 +6,4 @@ before_install:
   - docker build -t justinforever/docker-react-learning -f Dockerfile.dev .
 
 script:
-  - docker run justinforever/docker-react-learning npm run test -- --coverage
+  - docker run -e CI=true justinforever/docker-react-learning npm run test -- --coverage
